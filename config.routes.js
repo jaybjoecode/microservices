@@ -5,7 +5,7 @@ const ROUTES = [
     auth: false,
     creditCheck: false,
     proxy: {
-      target: "http://localhost:3001",
+      target: process.env.SERVER_AUTH,
       changeOrigin: true,
       pathRewrite: {
         [`^/auth`]: "",
@@ -17,7 +17,7 @@ const ROUTES = [
     auth: false,
     creditCheck: false,
     proxy: {
-      target: "http://localhost:3002",
+      target: process.env.SERVER_USER,
       changeOrigin: true,
       pathRewrite: {
         [`^/user`]: "",
@@ -29,7 +29,7 @@ const ROUTES = [
     auth: false,
     creditCheck: false,
     proxy: {
-      target: "http://localhost:3003",
+      target: process.env.SERVER_CHAT,
       changeOrigin: true,
       pathRewrite: {
         [`^/chat`]: "",
